@@ -1,0 +1,130 @@
+.divHeader {
+    text-align: right;
+    background-image: url('../Images/PXA_FondoNEGRO.jpg');
+}
+	
+.divTitle
+{ text-align:center;
+  color: orange;
+  font-size: 40px;
+  font-weight: bold ;
+ }
+ 
+.divSubTitle
+{ text-align:center;
+  color: orange;
+  font-size: 30px;
+  font-weight: bold ;
+ }
+
+.bodyClass {    
+    background-image: url('../Images/PXA_FondoGRIS.jpg');
+}
+ 
+.btnClass {
+	-moz-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	-webkit-box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	box-shadow:inset 0px 1px 0px 0px #f9eca0;
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f0c911), color-stop(1, #f2ab1e));
+	background:-moz-linear-gradient(top, #f0c911 5%, #f2ab1e 100%);
+	background:-webkit-linear-gradient(top, #f0c911 5%, #f2ab1e 100%);
+	background:-o-linear-gradient(top, #f0c911 5%, #f2ab1e 100%);
+	background:-ms-linear-gradient(top, #f0c911 5%, #f2ab1e 100%);
+	background:linear-gradient(to bottom, #f0c911 5%, #f2ab1e 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f0c911', endColorstr='#f2ab1e',GradientType=0);
+	background-color:#f0c911;
+	-moz-border-radius:16px;
+	-webkit-border-radius:16px;
+	border-radius:16px;
+	border:1px solid #e65f44;
+	display:inline-block;
+	cursor:pointer;
+	color:#c92200;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;	
+	text-decoration:none;
+	text-shadow:0px 1px 0px #ded17c;
+}
+.btnClass:hover {
+	background:-webkit-gradient(linear, left top, left bottom, color-stop(0.05, #f2ab1e), color-stop(1, #f0c911));
+	background:-moz-linear-gradient(top, #f2ab1e 5%, #f0c911 100%);
+	background:-webkit-linear-gradient(top, #f2ab1e 5%, #f0c911 100%);
+	background:-o-linear-gradient(top, #f2ab1e 5%, #f0c911 100%);
+	background:-ms-linear-gradient(top, #f2ab1e 5%, #f0c911 100%);
+	background:linear-gradient(to bottom, #f2ab1e 5%, #f0c911 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2ab1e', endColorstr='#f0c911',GradientType=0);
+	background-color:#f2ab1e;
+}
+.btnClass:active {
+	position:relative;
+	top:1px;
+}
+
+
+.lblTitle
+{ 
+	color: orange;
+    font-size: 30px;  
+ }
+ 
+ .tableMain
+ {
+ 	font-size: 20px;  
+ 	text-align:center ; 	
+ 	color:white;
+ 	}
+
+  .tableMainShift
+ {
+ 	font-size: 20px;  
+ 	text-align:left ; 	
+ 	color:white;     
+ 	}
+ 	
+.tableData
+ {
+    font-size: 20px;  
+ 	text-align:left; 	
+ 	color:white;
+ 	}
+
+.errorClass
+{
+    color: black ;
+    font-size:x-large;
+    font-weight: bold;
+    }
+
+.lblTable {
+    color: white;
+    font-size: 40px;  
+    text-align:right;
+}
+
+.txtClass{
+    border:2px solid #456879;
+	border-radius:10px;
+    font-size: 20px;
+}
+
+.lblName{
+    color: white;
+    font-size: 20px;  
+    }
+
+.txtData {
+    border-radius:10px;
+    font-size: 18px;
+}
+
+.txtDataError {        
+   border: solid;
+   border-color: red;
+   border-width: 4px;
+}
+
+.checkText {
+    color: white ;
+    font-size:18px;
+}

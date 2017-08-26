@@ -1,0 +1,36 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Header.Master.vb" Inherits="PraxmaMalhe.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>Praxma Malhe</title>
+    <link href="Css/custom.css" rel="stylesheet" type="text/css" />
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+<body class="bodyClass">
+    <form id="headerForm" runat="server">
+    <div class="divHeader">
+        <img src="Images/Logo PRAXMA PNG HQ.png" width="30%" height="30%"/>
+    </div>
+
+    <br />
+    <br />    
+    <div style="text-align:right">
+        <asp:Button ID="oBtnSalir" runat="server" Text="Salir" CssClass="btnClass" Height="30px" Width="80px" />
+    </div>
+    <div style="text-align:left">
+       <asp:Label ID="oLblName" runat="server" CssClass="lblName" />
+    </div>
+    <div>
+        
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>
