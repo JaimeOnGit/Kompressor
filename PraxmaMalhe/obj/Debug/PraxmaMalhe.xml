@@ -33,6 +33,15 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:PraxmaMalhe.Capture._oBtnSave">
+<summary>
+oBtnSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:PraxmaMalhe.Capture._tblCapture">
 <summary>
 tblCapture control.
@@ -54,15 +63,6 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:PraxmaMalhe.Capture._lblError">
 <summary>
 lblError control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:PraxmaMalhe.Capture._oBtnSave">
-<summary>
-oBtnSave control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -217,15 +217,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:PraxmaMalhe.Site1._oBtnReports">
-<summary>
-oBtnReports control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:PraxmaMalhe.Site1._oBtnSalir">
 <summary>
 oBtnSalir control.
@@ -247,6 +238,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:PraxmaMalhe.Site1._ContentPlaceHolder1">
 <summary>
 ContentPlaceHolder1 control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ProcessType._lblProcessType">
+<summary>
+lblProcessType control.
 </summary>
 <remarks>
 Auto-generated field.

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
   <parameter name="WebConnString-Web.config Connection String" description="WebConnString Connection String used in web.config by the application to access the database." defaultValue="Server=.\SQLEXPRESS;Database=PraxmaMalhe;User Id=WebAppUser;Password=WebAppPass" tags="SqlConnectionString">
-    <parameterEntry kind="XmlFile" scope="C:\\AdminTools\\Tools\\PraxmaMalhe\\PraxmaMalhe\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WebConnString']/@connectionString" />
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\ServerAdmin\\Documents\\GitHub\\Kompressor\\PraxmaMalhe\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WebConnString']/@connectionString" />
   </parameter>
 </parameters>

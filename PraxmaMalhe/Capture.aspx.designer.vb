@@ -41,6 +41,15 @@ Partial Public Class Capture
     Protected WithEvents lblDate As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''oBtnSave control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents oBtnSave As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
     '''tblCapture control.
     '''</summary>
     '''<remarks>
@@ -66,15 +75,6 @@ Partial Public Class Capture
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents lblError As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''oBtnSave control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents oBtnSave As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
     '''oBtnBackModule control.

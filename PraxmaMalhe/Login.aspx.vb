@@ -41,17 +41,25 @@ Public Class Login
         End If
         oSqlDataReader.Close()
 
-        oSqlDataReader = Nothing
-        oSqlCommand = Nothing
-        oSqlConn = Nothing
 
         lblError.InnerText = ""
         If Session("Name") <> "" Then
+
+            sQuery = "INSERT INTO dbo.UserLog (UserName, Action, DateTime) VALUES ('" & oTxtUser.Text & "', 'Login', GETDATE())"
+            oSqlCommand = New SqlClient.SqlCommand(sQuery, oSqlConn)
+            oSqlCommand.CommandType = CommandType.Text
+            oSqlDataReader = oSqlCommand.ExecuteReader()
+            oSqlDataReader.Close()
+
             Session("UserName") = oTxtUser.Text
             Response.Redirect("Module.aspx")
         Else
             lblError.InnerText = "Usuario o contraseña invalida"
         End If
+
+        oSqlDataReader = Nothing
+        oSqlCommand = Nothing
+        oSqlConn = Nothing
 
 
     End Sub
