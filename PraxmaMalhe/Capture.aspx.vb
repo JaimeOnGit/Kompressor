@@ -52,6 +52,7 @@ Public Class Capture
         sConnString = ConfigurationManager.ConnectionStrings("WebConnString").ConnectionString
 
         createTemplate()
+
     End Sub
 
     Sub createTemplate()
@@ -171,7 +172,7 @@ Public Class Capture
                     arrTotalProcess(arrCount) = itemTotalProcess
 
                     oRow = New TableRow
-                    oRow.ID = iIdModule
+                    oRow.ID = iIdModule & "_" & sShift
 
                     oCell = New TableCell
                     oCell.Text = sComponent
@@ -273,6 +274,7 @@ Public Class Capture
 
                         oControl.MaxLength = 4
                         oControl.Width = "60"
+                        oControl.Height = "16"
                         oControl.CssClass = "txtData"
 
                         oCell = New TableCell

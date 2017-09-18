@@ -37,12 +37,12 @@ Modulos
         <tr>
             <td colspan="2">&nbsp;</td>
         </tr>
-        <tr>
+        <%--<tr>
             <td style="text-align:center" width="50%"><asp:Button ID="oBtnB" runat="server" Text="Bore" CssClass="btnClass" 
             Height="65px" Width="200px" /></td>
             <td style="text-align:center" width="50%"><asp:Button ID="oBtnC" runat="server" Text="Comp2" CssClass="btnClass" 
             Height="65px" Width="200px" /></td>
-        </tr>
+        </tr>--%>
     </table>
            
 </div> 

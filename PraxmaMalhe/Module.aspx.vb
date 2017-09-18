@@ -41,11 +41,11 @@
         redirect("M4")
     End Sub
 
-    Protected Sub oBtnB_Click(sender As Object, e As EventArgs) Handles oBtnB.Click
-        redirect("B")
-    End Sub
+    'Protected Sub oBtnB_Click(sender As Object, e As EventArgs) Handles oBtnB.Click
+    '    redirect("B")
+    'End Sub
 
-    Protected Sub oBtnC_Click(sender As Object, e As EventArgs) Handles oBtnC.Click
-        redirect("C")
-    End Sub
+    'Protected Sub oBtnC_Click(sender As Object, e As EventArgs) Handles oBtnC.Click
+    '    redirect("C")
+    'End Sub
 End Class

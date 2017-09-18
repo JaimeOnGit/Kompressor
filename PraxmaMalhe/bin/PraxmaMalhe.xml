@@ -168,24 +168,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:PraxmaMalhe.Main._oBtnB">
-<summary>
-oBtnB control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
-<member name="F:PraxmaMalhe.Main._oBtnC">
-<summary>
-oBtnC control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="T:PraxmaMalhe.My.MyWebExtension">
  <summary>
  Module used to define the properties that are available in the My Namespace for Web projects.
@@ -229,6 +211,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:PraxmaMalhe.Site1._headerForm">
 <summary>
 headerForm control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Site1._oBtnReports">
+<summary>
+oBtnReports control.
 </summary>
 <remarks>
 Auto-generated field.
