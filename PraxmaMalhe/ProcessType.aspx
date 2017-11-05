@@ -13,7 +13,7 @@ Tipo de Proceso
 <br />
 <br />
 <div class="divSubTitle">
-    Selecciona el tipo de proceso
+    <asp:Label ID="lblProcessType" runat="server"></asp:Label>    
 </div>
 <br />
 <br />

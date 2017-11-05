@@ -3,7 +3,7 @@
   <PropertyGroup>
     <UseIISExpress>false</UseIISExpress>
     <ProjectView>ShowAllFiles</ProjectView>
-    <NameOfLastUsedPublishProfile>TEST</NameOfLastUsedPublishProfile>
+    <NameOfLastUsedPublishProfile>Praxma - Web Deploy</NameOfLastUsedPublishProfile>
   </PropertyGroup>
   <ProjectExtensions>
     <VisualStudio>

@@ -94,7 +94,10 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Css\" />
+    <Folder Include="Images\" />
+  </ItemGroup>
   <ItemGroup>
     <Import Include="Microsoft.VisualBasic" />
     <Import Include="System" />
@@ -119,25 +122,40 @@
     <Import Include="System.Web.UI.HtmlControls" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin.aspx" />
     <Content Include="Capture.aspx" />
-    <Content Include="Css\custom.css" />
-    <Content Include="Images\Logo PRAXMA PNG HQ.png" />
-    <Content Include="Images\Logo.jpg" />
-    <Content Include="Images\PXA_FondoBLANCO.jpg" />
-    <Content Include="Images\PXA_FondoGRIS.jpg" />
-    <Content Include="Images\PXA_FondoNEGRO.jpg" />
+    <Content Include="Component.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Module.aspx" />
+    <Content Include="ModuleCat.aspx" />
+    <Content Include="Part.aspx" />
     <Content Include="ProcessType.aspx" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
+    <Content Include="scripts\ai.0.22.9-build00167.min.js" />
+    <Content Include="Type.aspx" />
+    <Content Include="Users.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Admin.aspx.designer.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.aspx.vb">
+      <DependentUpon>Admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Capture.aspx.designer.vb">
       <DependentUpon>Capture.aspx</DependentUpon>
     </Compile>
     <Compile Include="Capture.aspx.vb">
       <DependentUpon>Capture.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Component.aspx.designer.vb">
+      <DependentUpon>Component.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Component.aspx.vb">
+      <DependentUpon>Component.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.vb">
@@ -152,6 +170,13 @@
     </Compile>
     <Compile Include="Module.aspx.vb">
       <DependentUpon>Module.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCat.aspx.designer.vb">
+      <DependentUpon>ModuleCat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ModuleCat.aspx.vb">
+      <DependentUpon>ModuleCat.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -180,11 +205,32 @@
       <DependentUpon>Header.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="Part.aspx.designer.vb">
+      <DependentUpon>Part.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Part.aspx.vb">
+      <DependentUpon>Part.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="ProcessType.aspx.designer.vb">
       <DependentUpon>ProcessType.aspx</DependentUpon>
     </Compile>
     <Compile Include="ProcessType.aspx.vb">
       <DependentUpon>ProcessType.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Type.aspx.designer.vb">
+      <DependentUpon>Type.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Type.aspx.vb">
+      <DependentUpon>Type.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Users.aspx.designer.vb">
+      <DependentUpon>Users.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users.aspx.vb">
+      <DependentUpon>Users.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>
@@ -204,7 +250,8 @@
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
     </None>
-    <None Include="My Project\PublishProfiles\TEST.pubxml" />
+    <None Include="My Project\PublishProfiles\Praxma - FTP.pubxml" />
+    <None Include="My Project\PublishProfiles\Praxma - Web Deploy.pubxml" />
     <None Include="My Project\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <CustomToolNamespace>My</CustomToolNamespace>

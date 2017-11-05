@@ -2,6 +2,31 @@
     Inherits System.Web.UI.Page
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        Dim oSqlConn As SqlClient.SqlConnection
+        Dim oSqlDataReader As SqlClient.SqlDataReader
+        Dim oSqlCommand As SqlClient.SqlCommand
+        Dim sConnString As String
+        Dim sQuery As String
+        Dim sModule As String = ""
+
+        sConnString = ConfigurationManager.ConnectionStrings("WebConnString").ConnectionString
+
+        sQuery = "SELECT Top 1 Description FROM dbo.Module WHERE Alias = '" & Session("Module") & "'"
+        oSqlConn = New SqlClient.SqlConnection(sConnString)
+        oSqlConn.Open()
+        oSqlCommand = New SqlClient.SqlCommand(sQuery, oSqlConn)
+        oSqlDataReader = oSqlCommand.ExecuteReader()
+
+        If oSqlDataReader.HasRows Then
+            Do While oSqlDataReader.Read()
+                sModule = oSqlDataReader(0).ToString
+            Loop
+        End If
+        oSqlDataReader.Close()
+        oSqlConn.Close()
+        oSqlConn = Nothing
+
+        lblProcessType.Text = "Selecciona el tipo de proceso para el modulo " & sModule
 
         If Session("UserName") = "" Then
             Response.Redirect("Login.aspx")

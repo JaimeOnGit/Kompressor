@@ -10,7 +10,7 @@ Public Class Capture
 
     Private Class clsReasons
         Public sTextBoxId As String
-        Public iReason As Int16
+        Public sReason As String
     End Class
 
     Dim sModule As String
@@ -171,7 +171,7 @@ Public Class Capture
                     arrTotalProcess(arrCount) = itemTotalProcess
 
                     oRow = New TableRow
-                    oRow.ID = iIdModule
+                    oRow.ID = iIdModule & "_" & sShift
 
                     oCell = New TableCell
                     oCell.Text = sComponent
@@ -219,16 +219,30 @@ Public Class Capture
         Dim oControl As TextBox
         Dim iIdModule As Integer
         Dim oCheck As CheckBox
+        Dim sShiftDesc As String = ""
+        'Dim oValidator As CompareValidator
 
         arrShifts = Session("Shifts").split("|")
+
 
         For iarrCount = 0 To arrShifts.Count - 1
             sShift = arrShifts(iarrCount)
 
+            sQuery = "SELECT Description From dbo.Shifts WHERE IdShift = '" & sShift & "'"
+            oSqlCommand = New SqlClient.SqlCommand(sQuery, oSqlConn)
+            oSqlDataReader = oSqlCommand.ExecuteReader()
+
+            If oSqlDataReader.HasRows Then
+                Do While oSqlDataReader.Read()
+                    sShiftDesc = oSqlDataReader(0).ToString
+                Loop
+            End If
+            oSqlDataReader.Close()
+
             oRow = New TableRow
 
             oCell = New TableCell
-            oCell.Text = "Turno " & sShift
+            oCell.Text = "Turno [" & sShift & ": " & sShiftDesc & "]"
             oCell.CssClass = "tableMainShift"
             oCell.ColumnSpan = 12
             oRow.Cells.Add(oCell)
@@ -273,10 +287,20 @@ Public Class Capture
 
                         oControl.MaxLength = 4
                         oControl.Width = "60"
+                        oControl.Height = "16"
                         oControl.CssClass = "txtData"
 
                         oCell = New TableCell
                         oCell.Controls.Add(oControl)
+
+                        'oValidator = New CompareValidator
+                        'oValidator.ID = "val_" & iIdModule & "_" & iCount & "_" & sShift
+                        'oValidator.ControlToValidate = iIdModule & "_" & iCount & "_" & sShift
+                        'oValidator.Operator = ValidationCompareOperator.GreaterThan
+                        'oValidator.Type = ValidationDataType.Integer
+                        'oValidator.ErrorMessage = "Solo numeros"
+                        'oValidator.ValueToCompare = 0
+                        'oCell.Controls.Add(oValidator)
 
                         oCheck = New CheckBox
                         oCheck.ID = "oCheck_Ope_" & iIdModule & "_" & iCount & "_" & sShift
@@ -380,7 +404,7 @@ Public Class Capture
         Dim sId As String
         Dim sValue As String
         Dim arrId As String()
-        Dim iReason As Int16
+        Dim sReason As String = ""
 
         Dim oTextboxes = Me.GetAllControls(Me).OfType(Of TextBox)().ToList()
 
@@ -404,7 +428,7 @@ Public Class Capture
                             If Not arrReasons Is Nothing Then
                                 For Each oReason In arrReasons
                                     If oReason.sTextBoxId = sId Then
-                                        iReason = oReason.iReason
+                                        sReason = oReason.sReason
                                     End If
                                 Next
                             End If
@@ -418,11 +442,11 @@ Public Class Capture
                                     oSqlCommand.Parameters.AddWithValue("CaptureDate", sProcessDate)
                                     oSqlCommand.Parameters.AddWithValue("ProcessTypeId", iIdProcessType)
                                     oSqlCommand.Parameters.AddWithValue("Total", sValue)
-                                    oSqlCommand.Parameters.AddWithValue("UserId", Session("Username"))
-                                    oSqlCommand.Parameters.AddWithValue("ReasonId", iReason)
-                                    oSqlCommand.ExecuteNonQuery()
+                            oSqlCommand.Parameters.AddWithValue("UserId", Session("Username"))
+                            oSqlCommand.Parameters.AddWithValue("ReasonId", sReason)
+                            oSqlCommand.ExecuteNonQuery()
 
-                                    oSqlCommand = Nothing
+                            oSqlCommand = Nothing
                                 End If
                             End If
                 Next
@@ -432,7 +456,7 @@ Public Class Capture
                 setError("Error: Selecciona la razon(es)")
             End If
         Else
-            setError("Error: Debes introducir solamente numeros")
+            setError("Error: Debes introducir solamente numeros, enteros y positivos")
         End If
 
     End Sub
@@ -444,14 +468,14 @@ Public Class Capture
         Dim itemReason As clsReasons
         Dim iCountReason As Int16
         Dim bFound As Boolean = False
-        Dim iReason As Int16
+        Dim sReason As String
 
         Dim oTextboxes = Me.GetAllControls(Me).OfType(Of TextBox)().ToList()
 
         iCountReason = 0
         hideCheckbox()
         For Each oTextBox In oTextboxes
-            iReason = 0
+            sReason = "0000"
             If oTextBox.Enabled Then
                 sId = oTextBox.ID.Substring(0, oTextBox.ID.IndexOf("_"))
                 sValue = oTextBox.Text
@@ -462,16 +486,16 @@ Public Class Capture
 
                     For Each oTotal In arrTotalProcess
                         If oTotal.iIdModule = sId And sValue < oTotal.iTotalProcess Then
-                            iReason = iValidateReason(oTextBox.ID)
+                            sReason = sValidateReason(oTextBox.ID)
 
-                            If iReason = 0 Then
+                            If sReason = "0000" Then
                                 oTextBox.CssClass = "txtDataError"
                                 bReturn = False
                             Else
                                 ReDim Preserve arrReasons(iCountReason)
                                 itemReason = New clsReasons
                                 itemReason.sTextBoxId = oTextBox.ID
-                                itemReason.iReason = iReason
+                                itemReason.sReason = sReason
                                 arrReasons(iCountReason) = itemReason
                                 iCountReason = iCountReason + 1
                             End If
@@ -505,11 +529,13 @@ Public Class Capture
         Next
     End Sub
 
-    Function iValidateReason(sId As String) As Integer
+    Function sValidateReason(sId As String) As String
+        Dim sReason As String
         Dim iReason As Int16
         Dim oChecks = Me.GetAllControls(Me).OfType(Of CheckBox)().ToList()
         Dim sCheckId As String
 
+        sReason = "0000"
         iReason = 0
         For Each oCheck In oChecks
             sCheckId = oCheck.ID.Substring(11)
@@ -529,14 +555,15 @@ Public Class Capture
                         Case "oCheck_Mat_"
                             iReason = iReason + 10
                         Case "oCheck_Pro_"
-                            iReason = iReason + 10
+                            iReason = iReason + 1
                     End Select
                 End If
 
             End If
         Next
 
-        Return iReason
+        sReason = iReason.ToString("0000")
+        Return sReason
     End Function
 
     Function bValidateData() As Boolean
@@ -562,6 +589,18 @@ Public Class Capture
                         oTextBox.CssClass = "txtDataError"
 
                         bReturnValue = False
+                    Else
+                        If sValue.IndexOf(".") > 0 Then
+                            oTextBox.CssClass = "txtDataError"
+
+                            bReturnValue = False
+                        Else
+                            If CInt(sValue) < 0 Then
+                                oTextBox.CssClass = "txtDataError"
+
+                                bReturnValue = False
+                            End If
+                        End If
 
                     End If
                 End If

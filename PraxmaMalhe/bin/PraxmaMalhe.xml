@@ -6,6 +6,60 @@ PraxmaMalhe
 </name>
 </assembly>
 <members>
+<member name="F:PraxmaMalhe.Admin._oBtnComponent">
+<summary>
+oBtnComponent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Admin._oBtnPart">
+<summary>
+oBtnPart control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Admin._oBtnType">
+<summary>
+oBtnType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Admin._oBtnModule">
+<summary>
+oBtnModule control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Admin._oBtnUsers">
+<summary>
+oBtnUsers control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Admin._oBtnModuleCapture">
+<summary>
+oBtnModuleCapture control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:PraxmaMalhe.Capture._lblModule">
 <summary>
 lblModule control.
@@ -27,6 +81,15 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:PraxmaMalhe.Capture._lblDate">
 <summary>
 lblDate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Capture._oBtnSave">
+<summary>
+oBtnSave control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -60,15 +123,6 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
-<member name="F:PraxmaMalhe.Capture._oBtnSave">
-<summary>
-oBtnSave control.
-</summary>
-<remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
-</remarks>
-</member>
 <member name="F:PraxmaMalhe.Capture._oBtnBackModule">
 <summary>
 oBtnBackModule control.
@@ -81,6 +135,33 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:PraxmaMalhe.Capture._oBtnBackProcessType">
 <summary>
 oBtnBackProcessType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Component._oGridView">
+<summary>
+oGridView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Component._lblError">
+<summary>
+lblError control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Component._oBtnAdmin">
+<summary>
+oBtnAdmin control.
 </summary>
 <remarks>
 Auto-generated field.
@@ -186,6 +267,132 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:PraxmaMalhe.ModuleCat._oGridView">
+<summary>
+oGridView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._oTxtId">
+<summary>
+oTxtId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._oDropModule">
+<summary>
+oDropModule control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._oDropComponent">
+<summary>
+oDropComponent control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._oDropType">
+<summary>
+oDropType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._oDropPart">
+<summary>
+oDropPart control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._oDropCell">
+<summary>
+oDropCell control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._oTxtProd">
+<summary>
+oTxtProd control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._oBtnAddnew">
+<summary>
+oBtnAddnew control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._oBtnUpdate">
+<summary>
+oBtnUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._oBtnSave">
+<summary>
+oBtnSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._oBtnCancel">
+<summary>
+oBtnCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._lblError">
+<summary>
+lblError control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ModuleCat._oBtnAdmin">
+<summary>
+oBtnAdmin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="T:PraxmaMalhe.My.MyWebExtension">
  <summary>
  Module used to define the properties that are available in the My Namespace for Web projects.
@@ -262,6 +469,42 @@ Auto-generated field.
 To modify move field declaration from designer file to code-behind file.
 </remarks>
 </member>
+<member name="F:PraxmaMalhe.Part._oGridView">
+<summary>
+oGridView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Part._lblError">
+<summary>
+lblError control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Part._oBtnAdmin">
+<summary>
+oBtnAdmin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.ProcessType._lblProcessType">
+<summary>
+lblProcessType control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
 <member name="F:PraxmaMalhe.ProcessType._oBtnProd">
 <summary>
 oBtnProd control.
@@ -283,6 +526,159 @@ To modify move field declaration from designer file to code-behind file.
 <member name="F:PraxmaMalhe.ProcessType._oBtnBack">
 <summary>
 oBtnBack control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Type._oGridView">
+<summary>
+oGridView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Type._lblError">
+<summary>
+lblError control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Type._oBtnAdmin">
+<summary>
+oBtnAdmin control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oGridView">
+<summary>
+oGridView control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oTxtUserId">
+<summary>
+oTxtUserId control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oTxtUser">
+<summary>
+oTxtUser control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oTxtName">
+<summary>
+oTxtName control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oTxtPassword">
+<summary>
+oTxtPassword control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oCheckActive">
+<summary>
+oCheckActive control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oDropRole">
+<summary>
+oDropRole control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oListShifts">
+<summary>
+oListShifts control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oBtnAddnew">
+<summary>
+oBtnAddnew control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oBtnUpdate">
+<summary>
+oBtnUpdate control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oBtnSave">
+<summary>
+oBtnSave control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oBtnCancel">
+<summary>
+oBtnCancel control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._lblError">
+<summary>
+lblError control.
+</summary>
+<remarks>
+Auto-generated field.
+To modify move field declaration from designer file to code-behind file.
+</remarks>
+</member>
+<member name="F:PraxmaMalhe.Users._oBtnAdmin">
+<summary>
+oBtnAdmin control.
 </summary>
 <remarks>
 Auto-generated field.

@@ -5,8 +5,8 @@
     
     <br />
     <br />
-    <br />   
-       
+    <br />          
+    
     <asp:Label ID="lblModule" runat="server" Text="" CssClass="lblTitle"></asp:Label>
     &nbsp;&nbsp;&nbsp;&nbsp;
     <asp:Label ID="lblProcessType" runat="server" Text="" CssClass="lblTitle"></asp:Label>
@@ -14,12 +14,16 @@
     <asp:Label ID="lblDate" runat="server" Text="" CssClass="lblTitle"></asp:Label>
     <br />
     <br />       
+    <div style="text-align:left">
+        <asp:Button ID="oBtnSave" runat="server" Text="Salvar" Height="30px" Width="80px" CssClass="btnClass" />
+    </div>
+        
     <table>
         <tr>
             <td style="vertical-align:top"><asp:Table ID="tblCapture" runat="server">
                 </asp:Table></td>
         <td style="vertical-align:top">
-        <div style="width:600px;overflow:auto;">    
+        <div style="width:220px;overflow:auto;">    
         <asp:Table ID="tblCaptureData" runat="server">
         </asp:Table>
         </div>
@@ -29,10 +33,7 @@
     
     <br />
         <asp:Label ID="lblError" runat="server" Text="" CssClass="errorClass"></asp:Label>
-    <br />
-    <div style="text-align:left">
-        <asp:Button ID="oBtnSave" runat="server" Text="Salvar" Height="30px" Width="80px" CssClass="btnClass" />
-    </div>
+    <br />    
 
     <div style="text-align:right">
         
@@ -41,5 +42,24 @@
         <asp:Button ID="oBtnBackProcessType" runat="server" Text="Proceso" CssClass="btnClass" Height="50px" Width="100px" />
         
     </div>
-       
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("input").not($(":button")).keypress(function (evt) {            
+            if (evt.keyCode == 13) {
+                iname = $(this).val();
+                if (iname !== 'Submit') {
+                    var fields = $(this).parents('form:eq(0),body').find('button, input, textarea, select');
+                    var index = fields.index(this);
+                    if (index > -1 && (index + 1) < fields.length) {
+                        fields.eq(index + 1).focus();
+                    }
+                    return false;
+                }
+            }
+        });
+    });
+
+</script>
+
 </asp:Content>
